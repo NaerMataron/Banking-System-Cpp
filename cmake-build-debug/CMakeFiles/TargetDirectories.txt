@@ -1,0 +1,3 @@
+D:/My Banking system/cmake-build-debug/CMakeFiles/untitled.dir
+D:/My Banking system/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/My Banking system/cmake-build-debug/CMakeFiles/rebuild_cache.dir
