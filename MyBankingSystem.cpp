@@ -22,7 +22,6 @@ class BankAccount {
     void CheckLowBalance(double minBalance = 50.0) const;
     bool TransferMoney(double amount, BankAccount& targetAccount);
     void changePIN();
-    void showTransactionHistory() const;
 };
 BankAccount::BankAccount(string owner, string accNum, double initialbalance, int Enteredpin) {
     ownerName = owner;
@@ -127,8 +126,8 @@ void BankAccount::changePIN() {
 }
 int main() {
     BankAccount account1("Vasilis Grigoriadis", "GR04112003",1000.0, 2003);
-    BankAccount account2("Kostas Grigoriadis", "GR03091973", 1000.0, 1973);
-    BankAccount account3("Maria Trafali", "GR12091974", 1000.0, 1974);
+    BankAccount account2("Giannis Papadopoulos", "GR09872001", 1000.0, 1234);
+    BankAccount account3("Dimitris Terzis", "GR12345678", 1000.0, 1234);
     BankAccount* currentAccount = nullptr;
     int choice,accountChoice;
     double amount;
@@ -136,8 +135,8 @@ int main() {
         std::cout << "\nBANK SYSTEM BY VASILISGR\n" << std::endl;
         std::cout << "\nChoose an account:\n";
         std::cout << "1. Vasilis Grigoriadis (GR04112003)\n";
-        std::cout << "2. Kostas Grigoriadis (GR03091973)\n";
-        std::cout << "3. Maria Trafali (GR12091974)\n";
+        std::cout << "2. Giannis Papadopoulos (GR09872001)\n";
+        std::cout << "3. Dimitris Terzis (GR12345678)\n";
         std::cout << "0. Exit\n";
         std::cout << "Choice: ";
         std::cin >> accountChoice;
@@ -167,7 +166,7 @@ int main() {
         }
 
         while (true) {
-            std::cout << "\nAccount: " << (accountChoice == 1 ? "Vasilis Grigoriadis" : (accountChoice == 2 ? "Kostas Grigoriadis": "Maria Trafali" )) << "\n";
+            std::cout << "\nAccount: " << (accountChoice == 1 ? "Vasilis Grigoriadis" : (accountChoice == 2 ? "Giannis Papadopoulos": "Dimitris Terzis" )) << "\n";
             std::cout << "\n1. Deposit\n2. Withdraw\n3. Balance\n4. Transfer money\n5. Change PIN\n0. Exit\nChoice: ";
             std::cin >> choice;
 
@@ -190,8 +189,8 @@ int main() {
                     BankAccount* targetAccount = nullptr;
                     std::cout << "Choose target account to transfer:\n" <<std::endl;
                     std::cout << "1. Vasilis Grigoriadis\n";
-                    std::cout << "2. Kostas Grigoriadis\n";
-                    std::cout << "3. Maria Trafali\n";
+                    std::cout << "2. Giannis Papadopoulos\n";
+                    std::cout << "3. Dimitris Terzis\n";
                     std::cout << "Choice: ";
                     std::cin >> targetChoice;
                     if (targetChoice == 1) {
